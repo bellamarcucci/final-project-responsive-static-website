@@ -920,3 +920,281 @@ aside img{
     font-style: normal;
     opacity: 0.9;
 }
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+    
+    /* Ajuste Geral do Container */
+    .mainHome {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        padding-right: 5rem;
+    }
+
+    /* Home - Imagens e Textos fluidos */
+    #first-img img, 
+    #second-img img {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-text {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    #second-img {
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .aside-content p {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .aside-title h1, aside img {
+        padding-left: 0;
+    }
+
+    /* Our History */
+    .history-container {
+        flex-direction: column;
+    }
+
+    .history-content {
+        width: 100%;
+        border-radius: 0;
+        padding-bottom: 40px;
+    }
+
+    .history-text p {
+        padding-right: 40px;
+    }
+
+    /* Team - Remover Floats e Paddings grandes */
+    .mainContentTeam {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #teamImg, #layoutImg {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+        height: auto;
+    }
+    
+    .marceloContent h2, .diegoContent h2 {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .marceloContent > p, .diegoContent > p {
+        margin-right: 0;
+        padding: 0 20px;
+    }
+
+    .mainContentMarcelo > img, .mainContentDiego > img {
+        float: none;
+        width: 100%;
+        height: auto;
+        margin: 0 0 20px 0;
+    }
+
+    .highlightsMarcelo, .highlightsDiego {
+        float: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Contact Page */
+    .contentForms2 {
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .imageForms2 {
+        display: none; /* Ocultar imagem decorativa para economizar espaço ou ajustar */
+    }
+
+    .mainContentForms2 {
+        width: 100%;
+    }
+    
+    .content2 {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        height: auto;
+    }
+
+    .email2 input {
+        margin-top: 20px; /* Reset da margem original */
+    }
+
+    .adress2, .socials2 {
+        margin-top: 20px;
+    }
+
+    /* Management */
+    .mainContentManagement > img:first-of-type,
+    .contentStrengths,
+    .textContentManagement,
+    #secondImgManagement {
+        flex: 0 0 50%; /* Divide em 2 colunas no tablet */
+    }
+    
+    .contentStrengths {
+        padding: 40px 20px;
+    }
+    
+    .contentStrengths h2 {
+        padding-left: 20px;
+        font-size: 24px;
+    }
+    
+    .divider {
+        left: 45%; /* Ajuste leve da linha */
+    }
+    
+    .strengths-items {
+        margin-left: 40px;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+
+    /* Header e Menu */
+    .header {
+        padding: 0 20px;
+    }
+
+    .navMenu {
+        width: 80%; /* Menu ocupa mais tela no mobile */
+    }
+
+    /* Home Texto */
+    .main-text h1 {
+        font-size: 32px;
+    }
+
+    .aside-title h1 {
+        font-size: 24px;
+    }
+
+    /* Our History */
+    .history-content h1 {
+        font-size: 30px;
+        padding-left: 20px;
+    }
+    
+    .history-text p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Team */
+    .textContentTeam h1 {
+        font-size: 30px;
+    }
+    
+    .mainContentMarcelo, .mainContentDiego {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Contact Page */
+    .contentForms2 {
+        width: 95%;
+        border-radius: 10px;
+    }
+
+    .name2 input, .email2 input, .message2 input {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .content2 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contact2, .adress2, .socials2 {
+        text-align: center;
+    }
+    
+    #submitButton2 {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* Management - Empilhamento Total */
+    .mainContentManagement > img:first-of-type,
+    .contentStrengths,
+    .textContentManagement,
+    #secondImgManagement {
+        flex: 0 0 100%; /* Uma coluna full width */
+        width: 100%;
+        height: auto;
+    }
+
+    .contentStrengths {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .divider {
+        display: none; /* Remove a linha vertical no mobile */
+    }
+
+    .contentStrengths h2 {
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .strengths-items {
+        margin-left: 0;
+    }
+
+    .quote-section {
+        margin-top: 0; /* Remove margem negativa */
+        padding: 20px;
+    }
+    
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .footer-nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    footer p {
+        margin-left: 0;
+    }
+}
