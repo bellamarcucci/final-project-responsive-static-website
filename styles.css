@@ -9,6 +9,7 @@
     --textColorClear:#FFFFFF;
     --titleSize: 2.5rem;
     --textSize: 1.2rem;
+    --textFooterSize: 0.8rem;
     --titleWeight: 400;
     --textWeight: 300;
     --btnFontSize: 1.5rem;
@@ -213,14 +214,12 @@ p {
 }
 
 
-
 .history-btn{
 
-    position:absolute;
-    top: 75rem;
-    left: 50%;
-    transform: translateX(-50%);
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto 0 auto;
     padding: 12px 24px;
     font-size: var(--btnFontSize);
     font-family: var(--titleFamily);
@@ -230,8 +229,6 @@ p {
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
-
-    margin-top: 3rem;
     width: fit-content;
 
 }
@@ -272,7 +269,11 @@ p {
     background-size: cover;
     background-position: center;
     width: 100%;
-    /* height: 80rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 4rem;
 }
 
 .aside-title h1{
@@ -294,15 +295,107 @@ p {
     line-height: 1.5;
 }
 
-.aside-img img{
-    width: auto;
-    height: 30rem;
-    display: block;
-    object-fit: cover;
-    /* position: absolute;
-    align-items: center; */
-
+.aside-img .aside-vertical { 
+    display: none;
 }
+.aside-img .aside-horizontal { 
+    display: flex; 
+    border-radius: 100px 15px 100px 15px;
+}
+
+figcaption {
+    font-family: var(--titleFamily);
+    font-size: var(--figcaptionSize);
+    font-weight: var(--fiigCaptionWeight);
+    color: var(--textColorClear);
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.tag {
+    margin-right: 0.3rem;}
+
+#second-img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0 0 0 0;
+    object-fit: cover;
+}
+
+/* Footer */
+
+footer {
+    background-color: #D9D9D9;
+    width: 100%;
+    padding: 20px 40px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-nav {
+    flex: 1;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #00152E;
+}
+
+.footer-nav ul li {
+    font-weight: 500;
+    color: #00152E;
+    font-size: var(--textFooterSize);
+    font-family: var(--textFamily);
+}
+
+.footer-nav ul li a:hover {
+    opacity: 0.7;
+}
+
+footer p {
+    color: #00152E;
+    font-size: 12px;
+    opacity: 0.7;
+    margin: 0;
+    margin-left: auto;
+    font-family: var(--textFamily);
+}
+
+/*Back to top btn*/
+
+.back-to-top{
+    position: fixed;
+    bottom: 3.5rem;
+    right: 3rem;
+    align-items: center;
+    justify-content: center;    
+    text-decoration: none; 
+    z-index: 9999;
+}
+
+.back-to-top span{
+    color: white;
+    font-size: 50px;
+    background-color: #423B2F;
+    border-radius: 50px;
+}
+
+
 
 
 /* Tablet (max-width: 1024px) */
@@ -359,19 +452,85 @@ p {
     }
 
     #first-img img{
-    height: 25rem;
-    display: block;
-    object-fit: cover;
+        height: 25rem;
+        display: block;
+        object-fit: cover;
+    }
+    .aside-img .aside-horizontal { 
+        display: none; 
+    }
+    .aside-img .aside-vertical { 
+        display: flex; 
+        border-radius: 100px 15px 100px 15px;
+        max-width: 48rem; 
+    }
+
+    /* Footer */
+
+    footer{
+        padding: 3rem 0 2rem 0;
+    }
+
+  .footer-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        text-align: center;
+    }
+
+  .footer-nav{
+        flex: unset;
+    }
+
+  .footer-nav ul{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    footer p{
+        margin-left: 0; 
+
+    }
+
+    .back-to-top{
+        display: none;
+    }
+
+     .history-btn{
+        font-size: 1.3rem;
+        padding: 10px 20px;
+    }
+
+    .material-symbols-outlined{
+        font-size: 1.3rem;
+    }
+ 
+
 
 }
 
-
-}
 /* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
     
     #element-img{
         display: none;
+    }
+
+    .aside-img .aside-vertical { 
+       padding: 0 2rem 0 2rem;
+       object-fit: cover;
+       max-width: 44rem;
+    }
+
+     .history-btn{
+        font-size: 1.1rem;
+        padding: 8px 16px;
+        margin: 2rem auto 0 auto;
+    }
+
+    .material-symbols-outlined{
+        font-size: 1.1rem;
     }
 
 }
