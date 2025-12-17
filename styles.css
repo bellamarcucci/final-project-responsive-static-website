@@ -1350,6 +1350,106 @@ footer p {
     background-color: #555; /* Cor ao passar o mouse */
 }
 
+.faq-section {
+    max-width: 900px; /* Largura controlada para leitura confortável */
+    margin: 0 auto;
+    padding: 60px 20px;
+    min-height: 85vh; /* Garante altura mínima para não ficar espremido */
+
+}
+
+.faq-header {
+    text-align: center;
+    /* margin-bottom: 50px; */
+    margin: 5rem 0 3rem 0;
+}
+
+.faq-header h1 {
+    font-family: var(--titleFamily);
+    font-size: 2.5rem;
+    color: #333; /* Ajuste conforme a cor da sua marca */
+    margin-bottom: 15px;
+}
+
+.faq-header p {
+    font-family: var(--textFamily);
+    color: #373737;
+    font-size: 1.1rem;
+}
+
+/* Container das perguntas */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+/* Estilo de cada item (Details) */
+.faq-item {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+/* Estilo da Pergunta (Summary) */
+.faq-question {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+    padding: 20px 10px;
+    cursor: pointer;
+    list-style: none; /* Remove a seta padrão feia do navegador */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Remove a seta padrão no Safari/Chrome antigos */
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+/* Estilo da Resposta */
+.faq-answer {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.6;
+    padding: 0 10px 20px 10px;
+    font-size: 0.95rem;
+    /* Animação simples de entrada */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Ícone da seta */
+.faq-icon {
+    transition: transform 0.3s ease;
+    color: #888;
+}
+
+/* Efeito quando o item está aberto (open attribute) */
+.faq-item[open] .faq-icon {
+    transform: rotate(180deg); /* Gira a seta */
+    color: #333;
+}
+
+/* Hover suave na pergunta */
+.faq-question:hover {
+    background-color: #f9f9f9;
+}
+
+/* Animação para o texto aparecer suavemente */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 
 
 
@@ -1891,5 +1991,12 @@ footer p {
         font-size: 1.2rem;
     }
 
+    /* FAQ */
+    .faq-header h1 {
+        font-size: 2rem;
+    }
+    .faq-question {
+        font-size: 1rem;
+    }
    
 }
