@@ -487,6 +487,277 @@ footer p {
     opacity: 0.7;
 } 
 
+/* Creative Team */
+
+.creative-team {
+    width: 100%;
+}
+
+/* Seção Team Intro */
+.mainContentTeam {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) minmax(300px, 2fr) minmax(150px, 0.8fr);
+    gap: 2rem;
+    align-items: center;
+    background-image: url(./images/background-img-1.png);
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 3rem;
+    min-height: 500px;
+}
+
+#teamImg {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 0 100px 15px 0;
+    justify-self: end;
+}
+
+.textContentTeam {
+    padding: 2rem;
+}
+
+.textContentTeam h1 {
+    font-family: var(--titleFamily);
+    font-size: clamp(1.8rem, 4vw, var(--titleSize));
+    color: var(--textColorDark);
+    font-weight: var(--titleWeight);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.textContentTeam p {
+    font-family: var(--textFamily);
+    color: var(--textColorDark);
+    font-size: clamp(1rem, 2vw, var(--textSize));
+    font-weight: var(--textWeight);
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+}
+
+.textContentTeam p:first-of-type {
+    margin-top: 0;
+}
+
+#layoutImg {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 100px 0 0 15px;
+}
+
+/* Seção Marcelo */
+.mainContentMarcelo {
+    background: linear-gradient(#ffffff, #476487);
+    padding: 5rem 3rem;
+    overflow: hidden;
+}
+
+.marcelo-wrapper {
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) minmax(300px, 2fr);
+    gap: 3rem;
+    align-items: start;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.mainContentMarcelo img {
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 15px;
+    justify-self: center;
+}
+
+.marceloContent {
+    padding: 2rem;
+}
+
+.marceloContent h2 {
+    font-family: var(--titleFamily);
+    font-size: clamp(1.8rem, 4vw, var(--titleSize));
+    color: var(--textColorDark);
+    font-weight: var(--titleWeight);
+    margin-bottom: 2rem;
+}
+
+.marceloContent p {
+    font-family: var(--textFamily);
+    color: var(--textColorDark);
+    font-size: clamp(1rem, 2vw, var(--textSize));
+    font-weight: var(--textWeight);
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+}
+
+.marceloContent p:first-of-type {
+    margin-top: 0;
+}
+
+.highlightsMarcelo {
+    background-color: #D9D9D9;
+    border-radius: 15px 50px 15px 50px;
+    padding: 2rem;
+    margin-top: 3rem;
+    max-width: 500px;
+}
+
+.highlightsMarcelo h3 {
+    font-family: var(--titleFamily);
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: var(--textColorDark);
+    font-weight: var(--titleWeight);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.highlightsMarcelo ul {
+    list-style: none;
+    padding: 0;
+    font-family: var(--textFamily);
+    color: var(--textColorDark);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-weight: var(--textWeight);
+    line-height: 1.8;
+    text-align: center;
+}
+
+.highlightsMarcelo ul li {
+    padding: 0.3rem 0;
+}
+
+/* Seção Diego */
+.mainContentDiego {
+    background: linear-gradient(#476487, #FFFFFF);
+    padding: 5rem 3rem;
+    overflow: hidden;
+}
+
+.diego-wrapper {
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) minmax(300px, 2fr);
+    gap: 3rem;
+    align-items: start;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.mainContentDiego img {
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 15px;
+    justify-self: center;
+}
+
+.diegoContent {
+    padding: 2rem;
+}
+
+.diegoContent h2 {
+    font-family: var(--titleFamily);
+    font-size: clamp(1.8rem, 4vw, var(--titleSize));
+    color: var(--textColorDark);
+    font-weight: var(--titleWeight);
+    margin-bottom: 2rem;
+}
+
+.diegoContent p {
+    font-family: var(--textFamily);
+    color: var(--textColorDark);
+    font-size: clamp(1rem, 2vw, var(--textSize));
+    font-weight: var(--textWeight);
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+}
+
+.diegoContent p:first-of-type {
+    margin-top: 0;
+}
+
+.highlightsDiego {
+    background-color: #D9D9D9;
+    border-radius: 15px 50px 15px 50px;
+    padding: 2rem;
+    margin-top: 3rem;
+    max-width: 500px;
+}
+
+.highlightsDiego h3 {
+    font-family: var(--titleFamily);
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: var(--textColorDark);
+    font-weight: var(--titleWeight);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.highlightsDiego ul {
+    list-style: none;
+    padding: 0;
+    font-family: var(--textFamily);
+    color: var(--textColorDark);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-weight: var(--textWeight);
+    line-height: 1.8;
+    text-align: center;
+}
+
+.highlightsDiego ul li {
+    padding: 0.3rem 0;
+}
+
+.management-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem auto 2rem;
+    padding: 12px 24px;
+    font-size: var(--btnFontSize);
+    font-family: var(--titleFamily);
+    color: var(--textColorClear);
+    background-color: #00152E;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.management-btn a {
+    text-decoration: none;
+    color: var(--textColorClear);
+}
+
+.management-btn a:link,
+.management-btn a:visited {
+    color: var(--textColorClear);
+    text-decoration: none;
+}
+
+.management-btn:hover {
+    background-color: #a1772d;
+}
+
+.management-btn:active {
+    opacity: 0.7;
+}
+
 
 /* Tablet (max-width: 1024px) */
 @media (max-width: 1024px) {
@@ -555,7 +826,6 @@ footer p {
         max-width: 48rem; 
     }
 
-     /* History page responsiveness */
     .history-container {
         flex-direction: column;
         align-items: center;
@@ -589,6 +859,67 @@ footer p {
         margin: 3rem auto 0 auto;
     }
 
+    .mainContentTeam {
+        grid-template-columns: 1fr;
+        padding: 3rem 2rem;
+        gap: 2rem;
+    }
+
+    #teamImg {
+        grid-row: 1;
+        max-height: 400px;
+        border-radius: 15px 100px 15px 100px;
+        justify-self: center;
+        max-width: 90%;
+    }
+
+    .textContentTeam {
+        grid-row: 2;
+        padding: 1.5rem;
+    }
+
+    #layoutImg {
+        display: none;
+    }
+
+    .marcelo-wrapper,
+    .diego-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .mainContentMarcelo,
+    .mainContentDiego {
+        padding: 4rem 2rem;
+        overflow: hidden;
+    }
+
+    .mainContentMarcelo img,
+    .mainContentDiego img {
+        max-width: 350px;
+        margin: 0 auto;
+        grid-column: unset;
+        grid-row: unset;
+    }
+
+    .marceloContent,
+    .diegoContent {
+        padding: 1.5rem;
+        grid-column: unset;
+        grid-row: unset;
+    }
+
+    .highlightsMarcelo,
+    .highlightsDiego {
+        position: static;
+        margin: 2rem auto 0;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        width: 100%;
+        max-width: 450px;
+    }
+
 
     /* Footer */
 
@@ -596,7 +927,7 @@ footer p {
         padding: 3rem 0 2rem 0;
     }
 
-  .footer-container{
+    .footer-container{
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -608,7 +939,7 @@ footer p {
         flex: unset;
     }
 
-  .footer-nav ul{
+    .footer-nav ul{
         flex-direction: column;
         gap: 1.5rem;
     }
@@ -656,6 +987,46 @@ footer p {
 
     .material-symbols-outlined{
         font-size: 1.1rem;
+    }
+
+     .mainContentTeam {
+        padding: 2rem 1.5rem;
+    }
+
+    #teamImg {
+        max-height: 350px;
+        max-width: 100%;
+    }
+
+    .textContentTeam {
+        padding: 1rem;
+    }
+
+    .mainContentMarcelo,
+    .mainContentDiego {
+        padding: 3rem 1.5rem;
+    }
+
+    .mainContentMarcelo img,
+    .mainContentDiego img {
+        max-width: 280px;
+    }
+
+    .marceloContent,
+    .diegoContent {
+        padding: 1rem;
+    }
+
+    .highlightsMarcelo,
+    .highlightsDiego {
+        padding: 1.5rem;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .management-btn {
+        margin: 3rem auto 2rem;
+        padding: 10px 20px;
     }
 
 }
