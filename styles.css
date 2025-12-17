@@ -1364,7 +1364,6 @@ footer p {
     letter-spacing: 2px;
 }
 
-/* Texto explicativo */
 .error-text {
     font-family: var(--textFamily);
     font-size: 1rem;
@@ -1391,6 +1390,8 @@ footer p {
 .btn-back:hover {
     background-color: #555; 
 }
+
+/* FAQ Section */
 
 .faq-section {
     max-width: 900px; 
@@ -1448,9 +1449,7 @@ footer p {
     align-items: center;
 }
 
-.faq-question::-webkit-details-marker {
-    display: none;
-}
+
 
 .faq-answer {
     font-family: 'Montserrat', sans-serif;
@@ -1758,6 +1757,9 @@ footer p {
         padding-bottom: 20px;
         scroll-snap-type: x mandatory;
         cursor: grab;
+        scrollbar-width: thin;
+        scrollbar-color: #8F7F65 #f1f1f1;
+        flex-wrap: nowrap;
     }
 
     .hospitals-mixed-layout {
@@ -1768,32 +1770,22 @@ footer p {
         padding-top: 0;
     }
 
-
-    .row-small-items::-webkit-scrollbar, 
-    .hospitals-row-4::-webkit-scrollbar {
-        height: 8px;
-    }
-    .row-small-items::-webkit-scrollbar-track, 
-    .hospitals-row-4::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 10px;
-    }
-    .row-small-items::-webkit-scrollbar-thumb, 
-    .hospitals-row-4::-webkit-scrollbar-thumb {
-        background: #8F7F65;
-        border-radius: 10px;
-    }
-
     .row-small-items .gallery-img {
-        flex: 0 0 22%;
+        flex: 0 0 auto;
+        width: 280px;
         height: 250px;
+        object-fit: cover;
         scroll-snap-align: start;
+        border-radius: 15px;
     }
 
     .hospitals-row-4 .hosp-img {
-        flex: 0 0 28%;
+       flex: 0 0 auto;
+        width: 320px;
         height: 250px;
+        object-fit: cover;
         scroll-snap-align: start;
+        border-radius: 15px;
     }
 
 
