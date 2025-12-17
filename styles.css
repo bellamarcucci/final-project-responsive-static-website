@@ -737,6 +737,7 @@ footer p {
     cursor: pointer;
     text-decoration: none;
     width: fit-content;
+    
 }
 
 .management-btn a {
@@ -757,6 +758,225 @@ footer p {
 .management-btn:active {
     opacity: 0.7;
 }
+
+/* Management Page */
+
+.mainContentManagement {
+    max-width: 100%;
+    width: 100%;
+    display: block; 
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Hero Section (Imagem + Texto Sobreposto) --- */
+
+.firstImgManagement {
+    width: 100%;
+    height: 90vh; 
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.7); 
+}
+
+.textContentManagement {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 10;
+    max-width: 500px;
+    color: var(--textColorClear);
+}
+
+.textContentManagement h1 {
+    font-family: var(--titleFamily);
+    font-weight: 300; 
+    font-size: 3.5rem;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    color: var(--textColorClear);
+}
+
+.textContentManagement h1 b {
+    display: block; 
+    font-weight: 700;
+    font-size: 5rem;
+    margin-top: 0.5rem;
+}
+
+.textContentManagement p {
+    font-family: var(--textFamily);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    font-weight: 300;
+}
+
+/* --- Strengths Section --- */
+
+.contentStrengths {
+    background-image: url('./images/bg-img.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 6rem 10%;
+    position: relative;
+    width: 100%;
+}
+
+.contentStrengths h2 {
+    text-align: center;
+    font-family: var(--titleFamily);
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    color: var(--textColorDark);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.contentStrengths h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--textColorDark);
+    margin-top: 10px;
+}
+
+/* Layout dos Itens */
+.strengths-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    counter-reset: strength-counter;
+}
+
+.item {
+    flex: 1;
+    position: relative;
+}
+
+.item::before {
+    counter-increment: strength-counter;
+    content: "0" counter(strength-counter);
+    font-family: var(--titleFamily);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--textColorDark);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.strength-text h3 {
+    font-family: var(--titleFamily);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--textColorDark);
+    text-transform: uppercase;
+}
+
+.strength-text p {
+    font-family: var(--textFamily);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 0;
+    color: #4a4a4a;
+    text-align: left;
+}
+
+/* --- Quote Section & Second Image Overlay --- */
+
+
+#secondImgManagement {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+
+/* Seção da Citação - Sobreposição */
+.quote-section {
+    position: relative;
+    margin-top: -20rem; 
+    margin-bottom: 10rem; 
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.quote-section blockquote {
+    padding: 3rem 4rem;
+    max-width: 800px;
+    text-align: center;
+    color: var(--textColorClear);
+    font-family: 'Playfair Display', serif; 
+    font-size: 1.8rem;
+    border-radius: 4px;
+    position: relative;
+}
+
+.quote-mark {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    line-height: 0.5;
+    margin-bottom: 1rem;
+    color: var(--textColorClear);
+}
+
+.quote-section cite {
+    display: block;
+    margin-top: 2rem;
+    font-family: var(--textFamily);
+    font-size: 0.9rem;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+
+.galeria-btn {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5rem;
+    background-color: #fff; 
+}
+
+.btn-learn-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 35px;
+    background-color: #00152E;
+    color: var(--textColorClear);
+    text-decoration: none;
+    font-family: var(--titleFamily);
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.btn-learn-more:hover {
+    background-color: #a1772d;
+}
+
+.btn-learn-more .material-symbols-outlined {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
 
 
 /* Tablet (max-width: 1024px) */
@@ -961,8 +1181,71 @@ footer p {
     .material-symbols-outlined{
         font-size: 1.3rem;
     }
- 
 
+   
+    /* Ajuste Hero */
+    .mainContentManagement img{
+        height: 30rem;
+    }
+
+    .textContentManagement {
+        left: 5%;
+        width: 90%;
+        top: 10%;
+    }
+    
+    .textContentManagement h1 {
+        font-size: 2.5rem;
+    }
+    .textContentManagement h1 b {
+        font-size: 3.5rem;
+    }
+
+    .strengths-items {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .item {
+        width: 70%;
+    }
+
+    /* Cascate */
+    .item:nth-child(1) {
+        align-self: flex-start;
+        margin-left: 0;
+    }
+
+    .item:nth-child(2) {
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-left: 15%; 
+    }
+
+    .item:nth-child(3) {
+        align-self: flex-end;
+        margin-left: 30%;
+    }
+    
+
+    #secondImgManagement{
+        height: 30rem;
+    }
+
+    .quote-section {
+        margin-top: -25rem;
+    }
+    
+    .quote-section blockquote {
+        padding: 2rem;
+        font-size: 1.4rem;
+        width: 90%;
+    }
+
+    .galeria-btn{
+        margin-top: 15rem;
+    }
 
 }
 
@@ -1029,4 +1312,21 @@ footer p {
         padding: 10px 20px;
     }
 
+    .item, 
+    .item:nth-child(2), 
+    .item:nth-child(3) {
+        width: 100%;
+        margin-left: 0;
+        align-self: flex-start;
+    }
+
+    .contentStrengths {
+        padding: 4rem 5%;
+    }
+    
+    .quote-mark {
+        font-size: 4rem;
+    }
+
+   
 }
