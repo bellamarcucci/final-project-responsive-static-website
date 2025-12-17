@@ -215,44 +215,9 @@ body{
 
 
 .history-btn{
-
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 3rem auto 0 auto;
-    padding: 12px 24px;
-    font-size: var(--btnFontSize);
-    font-family: var(--titleFamily);
-    color: var(--textColorClear);
-    background-color: #00152E;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
-    width: fit-content;
-
-}
-
-.material-symbols-outlined{
-  vertical-align: middle;
-  margin-left: 0.2rem;
-  font-size: var(--btnFontSize); 
-}
-
-.history-btn a:link,
-.history-btn a:visited {
-    color: var(--textColorClear);
-    text-decoration: none;
-}
-
-.history-btn:hover {
-    background-color: #a1772d;
-}   
-.history-btn:active {
-    opacity: 0.7;
-} 
-.history-btn a{
-    text-decoration: none;  
+    padding-bottom: 5rem;
 }
 
 #element-img{
@@ -446,6 +411,10 @@ footer p {
     line-height: 1.5;
 }
 
+.history-text p{
+    margin-top: 1.5rem;
+}
+
 .history-content h1{
    font-family: var(--titleFamily);
    color: var(--textColorClear);
@@ -453,39 +422,10 @@ footer p {
 }
 
 .creative-btn{
-
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 6rem 0 0 6rem;
-    padding: 12px 24px;
-    font-size: var(--btnFontSize);
-    font-family: var(--titleFamily);
-    color: var(--textColorClear);
-    background-color: #00152E;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
-    width: fit-content;
+    padding: 3rem;
 }
-.creative-btn a{
-    text-decoration: none;  
-}
-
-
-.creative-btn a:link,
-.creative-btn a:visited {
-    color: var(--textColorClear);
-    text-decoration: none;
-}
-
-.creative-btn:hover {
-    background-color: #a1772d;
-}   
-.creative-btn:active {
-    opacity: 0.7;
-} 
 
 /* Creative Team */
 
@@ -722,42 +662,12 @@ footer p {
     padding: 0.3rem 0;
 }
 
-.management-btn {
+.management-btn{
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 4rem auto 2rem;
-    padding: 12px 24px;
-    font-size: var(--btnFontSize);
-    font-family: var(--titleFamily);
-    color: var(--textColorClear);
-    background-color: #00152E;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
-    width: fit-content;
-    
+    padding-bottom: 5rem;
 }
 
-.management-btn a {
-    text-decoration: none;
-    color: var(--textColorClear);
-}
-
-.management-btn a:link,
-.management-btn a:visited {
-    color: var(--textColorClear);
-    text-decoration: none;
-}
-
-.management-btn:hover {
-    background-color: #a1772d;
-}
-
-.management-btn:active {
-    opacity: 0.7;
-}
 
 /* Management Page */
 
@@ -770,7 +680,7 @@ footer p {
     padding: 0;
 }
 
-/* --- Hero Section (Imagem + Texto Sobreposto) --- */
+/* --- Hero Section --- */
 
 .firstImgManagement {
     width: 100%;
@@ -850,7 +760,6 @@ footer p {
     margin-top: 10px;
 }
 
-/* Layout dos Itens */
 .strengths-items {
     display: flex;
     justify-content: space-between;
@@ -903,7 +812,6 @@ footer p {
     margin: 0;
 }
 
-/* Seção da Citação - Sobreposição */
 .quote-section {
     position: relative;
     margin-top: -20rem; 
@@ -987,14 +895,13 @@ footer p {
 }
 
 .hero-content {
-    /* Utilizando a imagem solicitada para o fundo do título */
     background-image: url('./images/bg-galeria.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     
     width: 100%;
-    height: 400px; /* Altura fixa para destaque */
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1013,7 +920,6 @@ footer p {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 1rem;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .hero-content h1 b {
@@ -1039,29 +945,26 @@ footer p {
     gap: 2.5rem;
 }
 
-/* --- Correção das Linhas com Scroll Lateral (Carrossel) --- */
 .row-small-items, 
 .hospitals-row-4 {
-    display: flex; /* Garante que fiquem lado a lado */
-    flex-direction: row; /* Força alinhamento horizontal */
-    flex-wrap: nowrap; /* Impede que quebrem linha */
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: nowrap;
     gap: 20px;
     padding-bottom: 15px;
 }
 
-/* Tamanho das Imagens no Carrossel Superior (Clínicas) */
 .row-small-items .gallery-img {
-    flex: 0 0 calc(20% - 16px); /* Exibe exatamente 5 imagens por vez */
-    height: 250px; /* Altura controlada para não ficarem gigantes */
+    flex: 0 0 calc(20% - 16px); 
+    height: 250px; 
     min-width: 250px; 
     object-fit: cover;
     border-radius: 15px;
     scroll-snap-align: start;
 }
 
-/* Tamanho das Imagens no Carrossel de Hospitais */
 .hospitals-row-4 .hosp-img {
-    flex: 0 0 calc(25% - 15px); /* Exibe exatamente 4 imagens por vez */
+    flex: 0 0 calc(25% - 15px);
     height: 280px;
     min-width: 300px;
     object-fit: cover;
@@ -1069,7 +972,6 @@ footer p {
     scroll-snap-align: start;
 }
 
-/* --- Linha Panorâmica (2 imagens) --- */
 .row-wide-items {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1085,7 +987,7 @@ footer p {
 }
 
 .gallery-hospitals {
-    background-color: #D9D9D9; /* Fundo cinza conforme mockup */
+    background-color: #D9D9D9;
     padding: 4rem 0;
     margin-top: 4rem;
     width: 100%;
@@ -1104,15 +1006,14 @@ footer p {
     font-weight: 400;
     display: inline-block;
     padding-bottom: 10px;
-    border-bottom: 2px solid var(--textColorDark); /* Linha abaixo do título */
+    border-bottom: 2px solid var(--textColorDark);
 }
 
-/* --- Seção Hospitais (Layout Misto) --- */
 .hospitals-mixed-layout {
     display: grid;
-    grid-template-columns: 1.6fr 1fr; /* Esquerda maior conforme mockup */
+    grid-template-columns: 1.6fr 1fr;
     gap: 20px;
-    height: 600px;
+    height: 17rem;
 }
 
 .mixed-left img {
@@ -1129,13 +1030,12 @@ footer p {
 }
 
 .mixed-right img {
-    height: calc(50% - 10px); /* Divide o espaço entre as duas imagens */
+    height: auto;
     width: 100%;
     object-fit: cover;
     border-radius: 15px;
 }
 
-/* --- Linha Final (2 imagens médias) --- */
 .hospitals-row-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1148,23 +1048,6 @@ footer p {
     width: 100%;
     object-fit: cover;
     border-radius: 15px;
-}
-
-/* --- Estilização da Scrollbar (Opcional, para UX) --- */
-.row-small-items::-webkit-scrollbar, 
-.hospitals-row-4::-webkit-scrollbar {
-    height: 6px;
-}
-
-.row-small-items::-webkit-scrollbar-thumb, 
-.hospitals-row-4::-webkit-scrollbar-thumb {
-    background-color: #8F7F65;
-    border-radius: 10px;
-}
-
-.row-small-items::-webkit-scrollbar-track, 
-.hospitals-row-4::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
 }
 
 
@@ -1257,9 +1140,9 @@ footer p {
 
 .mainTitle2 h1{
     font-family: var(--titleFamily);
-    font-weight: var(--titleWeight);
+    font-weight: 700;
     font-size: var(--titleSize);
-    color: var(--textColorDark);
+    color: #00024B;
 }
 
 
@@ -1336,14 +1219,22 @@ footer p {
     color: #FFFFFF;
     width: 200px;
     height: 38px;
-    border-radius: 24px;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: 400;
     margin-left: 10px;
     border: none;
     margin-top: 30px;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--titleFamily);
+    transition: background 0.3s ease;
 }
+
+#submitButton2:hover {
+    background-color: #a1772d;
+}
+
+
+
 
 .contact2{
     grid-row: 1/2;
@@ -1663,18 +1554,24 @@ footer p {
         margin-top: 15rem;
     }
 
-    /* Transforma a linha de 5 itens e a linha de 4 hospitais em carrossel */
+    /* Gallery Page */
+    
+
     .row-small-items, 
     .hospitals-row-4 {
         display: flex;
         overflow-x: auto;
         gap: 20px;
-        padding-bottom: 20px; /* Espaço para a scrollbar não colar na imagem */
-        scroll-snap-type: x mandatory; /* Efeito magnético ao rolar */
+        padding-bottom: 20px;
+        scroll-snap-type: x mandatory;
         cursor: grab;
     }
 
-    /* Estilização da barra de rolagem para ficar sutil */
+    .hospitals-mixed-layout {
+        height: auto;
+    }
+
+
     .row-small-items::-webkit-scrollbar, 
     .hospitals-row-4::-webkit-scrollbar {
         height: 8px;
@@ -1686,19 +1583,18 @@ footer p {
     }
     .row-small-items::-webkit-scrollbar-thumb, 
     .hospitals-row-4::-webkit-scrollbar-thumb {
-        background: #8F7F65; /* Cor da marca */
+        background: #8F7F65;
         border-radius: 10px;
     }
 
-    /* Tamanho fixo dos itens dentro do carrossel para forçar o scroll */
     .row-small-items .gallery-img {
-        flex: 0 0 22%; /* Mostra aprox 4.5 imagens por vez */
+        flex: 0 0 22%;
         height: 250px;
         scroll-snap-align: start;
     }
 
     .hospitals-row-4 .hosp-img {
-        flex: 0 0 28%; /* Mostra aprox 3.5 imagens por vez */
+        flex: 0 0 28%;
         height: 250px;
         scroll-snap-align: start;
     }
@@ -1706,7 +1602,6 @@ footer p {
 
 
     /* Contact page */
-    /* Remove a imagem */
     .imageForms2 {
         display: none;
     }
@@ -1715,18 +1610,16 @@ footer p {
         display: block;
     }
 
-    /* Container Principal */
     .contentForms2 {
         display: flex;
         flex-direction: column;
         width: 90%;
         height: 60rem;
         padding: 5rem;
-        align-items: center; /* Centraliza o conteúdo geral */
+        align-items: center;
         position: relative;
         top: 5rem;
         left: 2rem;
-        /* margin: 5rem; */
     }
 
     .mainContentForms2 {
@@ -1741,49 +1634,44 @@ footer p {
         width: 100%;
     }
 
-    /* Container dos campos - Centralização Flex */
     .content2 {
         display: flex;
         flex-direction: column;
         width: 100%;
-        align-items: center; /* O segredo para centralizar os inputs no meio da página */
+        align-items: center;
         gap: 20px;
     }
 
-    /* Wrappers dos inputs (Nome, Email, Mensagem) */
     .name2, .email2, .message2 {
-        width: 100%;         /* Ocupa 100% do espaço disponível... */
-        max-width: 30rem;    /* ...Até chegar no limite de 30rem (aprox 480px) */
-        margin: 0;           /* Remove margens laterais antigas */
-        display: flex;       /* Garante alinhamento interno */
+        width: 100%;
+        max-width: 30rem;
+        margin: 0;
+        display: flex;
         justify-content: center;
     }
 
-    /* Estilo direto nos Inputs */
     .name2 input, 
     .email2 input, 
     .message2 input {
-        width: 100%;        /* O input preenche o wrapper de 30rem */
+        width: 100%;
         margin: 1rem;
         box-sizing: border-box;
-        text-align: left;   /* Mantém o texto digitado à esquerda (melhor UX) */
+        text-align: left;
     }
 
-    /* Botão de Enviar */
     .submit2 {
-        width: 100%;
-        max-width: 30rem;   /* Segue a mesma largura dos inputs para consistência visual */
+        width: 18rem;
+        max-width: 30rem;
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
     }
 
     #submitButton2 {
-        margin: 1rem 0 0 0; /* Espaço superior */
-        width: 100%;       /* Botão preenche os 30rem (opcional, fica visualmente forte) */
+        margin: 1rem 0 0 0;
+        width: 100%;
     }
 
-    /* Informações de Contato */
     .contact2, .adress2, .socials2 {
         text-align: center;
         width: 100%;
@@ -1805,16 +1693,8 @@ footer p {
         display: none;
     }
 
-    .aside-img .aside-vertical { 
-       padding: 0 2rem 0 2rem;
-       object-fit: cover;
-       max-width: 44rem;
-    }
-
-     .history-btn{
-        font-size: 1.1rem;
-        padding: 8px 16px;
-        margin: 2rem auto 0 auto;
+    .aside-content{
+        display: none;
     }
 
     .material-symbols-outlined{
@@ -1884,35 +1764,32 @@ footer p {
 
     .hero-content {
         height: 250px;
-        background-attachment: scroll; /* Performance mobile */
+        background-attachment: scroll;
     }
     .hero-content h1 {
         font-size: 2rem;
     }
 
-    /* Transforma tudo em coluna única ou grid de 2 dependendo do tamanho */
     .row-small-items {
         grid-template-columns: repeat(2, 1fr);
     }
     
     .row-wide-items {
-        grid-template-columns: 1fr; /* Empilha */
+        grid-template-columns: 1fr;
         height: auto;
     }
     .row-wide-items img {
         height: 200px;
     }
 
-    /* Hospitais */
     .gallery-hospitals {
         padding: 2rem 0;
     }
 
     .hospitals-row-4 {
-        grid-template-columns: 1fr; /* Uma coluna */
+        grid-template-columns: 1fr;
     }
 
-    /* Desfaz o layout misto complexo para empilhar tudo */
     .hospitals-mixed-layout {
         display: flex;
         flex-direction: column;
@@ -1924,8 +1801,8 @@ footer p {
     }
     
     .mixed-right {
-        flex-direction: row; /* Coloca as duas pequenas lado a lado no mobile */
-        height: 150px;
+        flex-direction: row;
+        height: 7rem;
     }
 
     .hospitals-row-2 {
