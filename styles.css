@@ -978,6 +978,228 @@ footer p {
 }
 
 
+    
+/* Gallery Page */
+.gallery-main {
+    width: 100%;
+    display: block;
+    padding-bottom: 4rem;
+}
+
+.hero-content {
+    /* Utilizando a imagem solicitada para o fundo do título */
+    background-image: url('./images/bg-galeria.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    width: 100%;
+    height: 400px; /* Altura fixa para destaque */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 0 20px;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-family: var(--titleFamily);
+    font-weight: 300;
+    font-size: 3rem;
+    color: var(--textColorClear);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hero-content h1 b {
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-family: var(--textFamily);
+    font-size: 1rem;
+    color: var(--textColorClear);
+    margin-top: 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.gallery-grid-top, 
+.hospitals-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* --- Correção das Linhas com Scroll Lateral (Carrossel) --- */
+.row-small-items, 
+.hospitals-row-4 {
+    display: flex; /* Garante que fiquem lado a lado */
+    flex-direction: row; /* Força alinhamento horizontal */
+    flex-wrap: nowrap; /* Impede que quebrem linha */
+    gap: 20px;
+    padding-bottom: 15px;
+}
+
+/* Tamanho das Imagens no Carrossel Superior (Clínicas) */
+.row-small-items .gallery-img {
+    flex: 0 0 calc(20% - 16px); /* Exibe exatamente 5 imagens por vez */
+    height: 250px; /* Altura controlada para não ficarem gigantes */
+    min-width: 250px; 
+    object-fit: cover;
+    border-radius: 15px;
+    scroll-snap-align: start;
+}
+
+/* Tamanho das Imagens no Carrossel de Hospitais */
+.hospitals-row-4 .hosp-img {
+    flex: 0 0 calc(25% - 15px); /* Exibe exatamente 4 imagens por vez */
+    height: 280px;
+    min-width: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    scroll-snap-align: start;
+}
+
+/* --- Linha Panorâmica (2 imagens) --- */
+.row-wide-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 400px;
+}
+
+.row-wide-items img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.gallery-hospitals {
+    background-color: #D9D9D9; /* Fundo cinza conforme mockup */
+    padding: 4rem 0;
+    margin-top: 4rem;
+    width: 100%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title h2 {
+    font-family: var(--titleFamily);
+    font-size: 2rem;
+    color: var(--textColorDark);
+    font-weight: 400;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--textColorDark); /* Linha abaixo do título */
+}
+
+/* --- Seção Hospitais (Layout Misto) --- */
+.hospitals-mixed-layout {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr; /* Esquerda maior conforme mockup */
+    gap: 20px;
+    height: 600px;
+}
+
+.mixed-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.mixed-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mixed-right img {
+    height: calc(50% - 10px); /* Divide o espaço entre as duas imagens */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* --- Linha Final (2 imagens médias) --- */
+.hospitals-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: 450px;
+}
+
+.hospitals-row-2 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* --- Estilização da Scrollbar (Opcional, para UX) --- */
+.row-small-items::-webkit-scrollbar, 
+.hospitals-row-4::-webkit-scrollbar {
+    height: 6px;
+}
+
+.row-small-items::-webkit-scrollbar-thumb, 
+.hospitals-row-4::-webkit-scrollbar-thumb {
+    background-color: #8F7F65;
+    border-radius: 10px;
+}
+
+.row-small-items::-webkit-scrollbar-track, 
+.hospitals-row-4::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+
+.contact-btn {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5rem;
+    background-color: #fff; 
+    margin-top: 5rem;
+}
+
+.btn-learn-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 35px;
+    background-color: #00152E;
+    color: var(--textColorClear);
+    text-decoration: none;
+    font-family: var(--titleFamily);
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.btn-learn-more:hover {
+    background-color: #a1772d;
+}
+
+.btn-learn-more .material-symbols-outlined {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+
 
 /* Tablet (max-width: 1024px) */
 @media (max-width: 1024px) {
@@ -1247,6 +1469,46 @@ footer p {
         margin-top: 15rem;
     }
 
+    /* Transforma a linha de 5 itens e a linha de 4 hospitais em carrossel */
+    .row-small-items, 
+    .hospitals-row-4 {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding-bottom: 20px; /* Espaço para a scrollbar não colar na imagem */
+        scroll-snap-type: x mandatory; /* Efeito magnético ao rolar */
+        cursor: grab;
+    }
+
+    /* Estilização da barra de rolagem para ficar sutil */
+    .row-small-items::-webkit-scrollbar, 
+    .hospitals-row-4::-webkit-scrollbar {
+        height: 8px;
+    }
+    .row-small-items::-webkit-scrollbar-track, 
+    .hospitals-row-4::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+    .row-small-items::-webkit-scrollbar-thumb, 
+    .hospitals-row-4::-webkit-scrollbar-thumb {
+        background: #8F7F65; /* Cor da marca */
+        border-radius: 10px;
+    }
+
+    /* Tamanho fixo dos itens dentro do carrossel para forçar o scroll */
+    .row-small-items .gallery-img {
+        flex: 0 0 22%; /* Mostra aprox 4.5 imagens por vez */
+        height: 250px;
+        scroll-snap-align: start;
+    }
+
+    .hospitals-row-4 .hosp-img {
+        flex: 0 0 28%; /* Mostra aprox 3.5 imagens por vez */
+        height: 250px;
+        scroll-snap-align: start;
+    }
+
 }
 
 /* Mobile (max-width: 768px) */
@@ -1326,6 +1588,65 @@ footer p {
     
     .quote-mark {
         font-size: 4rem;
+    }
+
+    .gallery-grid-top, .hospitals-grid {
+        padding: 0 20px;
+        gap: 1.5rem;
+    }
+
+    .hero-content {
+        height: 250px;
+        background-attachment: scroll; /* Performance mobile */
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    /* Transforma tudo em coluna única ou grid de 2 dependendo do tamanho */
+    .row-small-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .row-wide-items {
+        grid-template-columns: 1fr; /* Empilha */
+        height: auto;
+    }
+    .row-wide-items img {
+        height: 200px;
+    }
+
+    /* Hospitais */
+    .gallery-hospitals {
+        padding: 2rem 0;
+    }
+
+    .hospitals-row-4 {
+        grid-template-columns: 1fr; /* Uma coluna */
+    }
+
+    /* Desfaz o layout misto complexo para empilhar tudo */
+    .hospitals-mixed-layout {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .mixed-left img {
+        height: 250px;
+    }
+    
+    .mixed-right {
+        flex-direction: row; /* Coloca as duas pequenas lado a lado no mobile */
+        height: 150px;
+    }
+
+    .hospitals-row-2 {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .hospitals-row-2 img {
+        height: 200px;
     }
 
    
