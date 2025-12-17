@@ -4,6 +4,33 @@
     padding: 0px;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes organic-breathe {
+    0% {
+        /* Estado inicial (o original) */
+        border-radius: 100px 15px 100px 15px;
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+    50% {
+        /* Estado do meio: Invertemos levemente a lógica das curvas
+           para criar um efeito de 'líquido' ou movimento suave */
+        border-radius: 30px 90px 30px 90px;
+        transform: scale(1.02); /* Zoom extremamente sutil (apenas 2%) */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Sombra suave para profundidade */
+    }
+    100% {
+        /* Volta ao estado inicial para o loop ser perfeito */
+        border-radius: 100px 15px 100px 15px;
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+}
+
+
 :root{
     --textColorDark:#1E1E1E; 
     --textColorClear:#FFFFFF;
@@ -267,6 +294,28 @@ body{
     display: flex; 
     border-radius: 100px 15px 100px 15px;
 }
+
+.aside-img img {
+    border-radius: 100px 15px 100px 15px;
+    transition: all 0.6s ease-in-out; 
+    will-change: border-radius, transform; 
+}
+
+.projeto-figure:hover img {
+    animation: organic-breathe 4s infinite ease-in-out;
+    
+    filter: brightness(1.05);
+}
+
+.projeto-figure figcaption {
+    transition: transform 0.4s ease;
+}
+
+.projeto-figure:hover figcaption {
+    transform: translateY(-5px);
+}
+
+
 
 figcaption {
     font-family: var(--titleFamily);
@@ -1291,7 +1340,7 @@ footer p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 85vh; /* Garante altura mínima para não ficar espremido */
+    min-height: 85vh; 
     padding: 40px 20px;
 }
 
@@ -1299,17 +1348,15 @@ footer p {
     max-width: 600px;
 }
 
-/* O número gigante 404 */
 .error-code {
     font-family: var(--titleFamily);
-    font-size: 8rem; /* Tamanho bem grande */
+    font-size: 8rem;
     font-weight: 700;
     margin: 0;
     line-height: 1;
-    color: #333; /* Ajuste para a cor principal do seu tema */
+    color: #333;
 }
 
-/* O subtítulo "Espaço não projetado" */
 .error-msg {
     font-family: var(--textFamily);
     font-size: 1.5rem;
@@ -1330,44 +1377,42 @@ footer p {
     line-height: 1.6;
 }
 
-/* Botão de voltar */
 .btn-back {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     padding: 12px 30px;
-    background-color: #333; /* Cor do botão */
+    background-color: #333; 
     color: #fff;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    border-radius: 4px; /* Ou 0px se seu design for quadrado */
+    border-radius: 4px; 
     transition: background-color 0.3s ease;
 }
 
 .btn-back:hover {
-    background-color: #555; /* Cor ao passar o mouse */
+    background-color: #555; 
 }
 
 .faq-section {
-    max-width: 900px; /* Largura controlada para leitura confortável */
+    max-width: 900px; 
     margin: 0 auto;
     padding: 60px 20px;
-    min-height: 85vh; /* Garante altura mínima para não ficar espremido */
+    min-height: 85vh; 
 
 }
 
 .faq-header {
     text-align: center;
-    /* margin-bottom: 50px; */
     margin: 5rem 0 3rem 0;
 }
 
 .faq-header h1 {
     font-family: var(--titleFamily);
     font-size: 2.5rem;
-    color: #333; /* Ajuste conforme a cor da sua marca */
+    color: #333; 
     margin-bottom: 15px;
 }
 
@@ -1377,7 +1422,6 @@ footer p {
     font-size: 1.1rem;
 }
 
-/* Container das perguntas */
 .faq-container {
     display: flex;
     flex-direction: column;
@@ -1385,7 +1429,6 @@ footer p {
 
 }
 
-/* Estilo de cada item (Details) */
 .faq-item {
     background-color: #fff;
     border-bottom: 1px solid #e0e0e0;
@@ -1396,7 +1439,6 @@ footer p {
     border-bottom: none;
 }
 
-/* Estilo da Pergunta (Summary) */
 .faq-question {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -1404,18 +1446,16 @@ footer p {
     color: #333;
     padding: 20px 10px;
     cursor: pointer;
-    list-style: none; /* Remove a seta padrão feia do navegador */
+    list-style: none; 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Remove a seta padrão no Safari/Chrome antigos */
 .faq-question::-webkit-details-marker {
     display: none;
 }
 
-/* Estilo da Resposta */
 .faq-answer {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -1423,31 +1463,21 @@ footer p {
     line-height: 1.6;
     padding: 0 10px 20px 10px;
     font-size: 0.95rem;
-    /* Animação simples de entrada */
     animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Ícone da seta */
 .faq-icon {
     transition: transform 0.3s ease;
     color: #888;
 }
 
-/* Efeito quando o item está aberto (open attribute) */
 .faq-item[open] .faq-icon {
-    transform: rotate(180deg); /* Gira a seta */
+    transform: rotate(180deg);
     color: #333;
 }
 
-/* Hover suave na pergunta */
 .faq-question:hover {
     background-color: #f9f9f9;
-}
-
-/* Animação para o texto aparecer suavemente */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 
 
